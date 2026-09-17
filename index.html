@@ -86,8 +86,10 @@
                 {
                     center: [39.0, -105.5],
                     crs: L.CRS.EPSG3857,
+	            zoomSnap: 0.25,
+                    zoomDelta: 0.5,
                     ...{
-  "zoom": 7,
+  "zoom": 7.5,
   "zoomControl": true,
   "preferCanvas": false,
 }
@@ -117,7 +119,16 @@
         
     
             tile_layer_52c313a3ef4c3c1fb85c8abc0278f74c.addTo(map_eaecd460a15e5da398f36337e7dd46cf);
-        
+            
+            L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}",
+                {
+                    "attribution": "Esri, Garmin, USGS",
+                    "opacity": 0.9,
+                    "minZoom": 0,
+                    "maxZoom": 16
+                }
+            ).addTo(map_eaecd460a15e5da398f36337e7dd46cf);
     
             var feature_group_6460f3b5410708bd8e2c29aac32628d8 = L.featureGroup(
                 {
@@ -5107,8 +5118,9 @@
 }
             );
         
-    
-            feature_group_6460f3b5410708bd8e2c29aac32628d8.addTo(map_eaecd460a15e5da398f36337e7dd46cf);
+    		
+            // feature_group_6460f3b5410708bd8e2c29aac32628d8.addTo(map_eaecd460a15e5da398f36337e7dd46cf);
+
         
     
             var feature_group_707983d5f9fb579be81f74175e4e3156 = L.featureGroup(
@@ -47273,7 +47285,8 @@
             );
         
     
-            feature_group_894098aec9ce9df62752b91bd7ba2cfa.addTo(map_eaecd460a15e5da398f36337e7dd46cf);
+            // feature_group_894098aec9ce9df62752b91bd7ba2cfa.addTo(map_eaecd460a15e5da398f36337e7dd46cf);
+
         
     
             var feature_group_aed53ce8c3180f2de4fa643530a5bf70 = L.featureGroup(
@@ -55286,7 +55299,12 @@
                 marker_15895407cdd3b7afc18539a0e0071bd2.setIcon(div_icon_52861906954c54519411b346790e1004);
             
     
-            feature_group_af0d15bd3d9f1036301ebb6fd221a709.addTo(map_eaecd460a15e5da398f36337e7dd46cf);
+            // Keeps Top Diverse Picks ON:
+feature_group_af0d15bd3d9f1036301ebb6fd221a709.addTo(map_eaecd460a15e5da398f36337e7dd46cf);
+
+// Turns Decline ON:
+feature_group_707983d5f9fb579be81f74175e4e3156.addTo(map_eaecd460a15e5da398f36337e7dd46cf);
+
         
     
             var layer_control_6860807909c40b1016f379307d194b29_layers = {
